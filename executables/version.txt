@@ -1,0 +1,32 @@
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),  # 文件版本号：主版本.次版本.修订号.构建号
+    prodvers=(1, 0, 0, 0),  # 产品版本号（通常与文件版本一致）
+    mask=0x3f,              # 固定掩码（保持0x3f即可）
+    flags=0x0,              # 标志（0x0为默认）
+    OS=0x4,                 # 操作系统：0x4表示Windows NT
+    fileType=0x1,           # 文件类型：0x1表示应用程序
+    subtype=0x0,            # 子类型（0x0为默认）
+    date=(0, 0)             # 日期（无需修改，默认即可）
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          u'040904e4',  # 语言代码：0409=英语(美国)，04e4= Unicode编码
+          [
+            StringStruct(u'CompanyName', u'Li Beile 李倍乐'),  # 开发者/公司名
+            StringStruct(u'FileDescription', u'岭南文化交互展示程序'),  # 文件描述
+            StringStruct(u'FileVersion', u'1.0.0.0'),  # 文件版本（字符串形式）
+            StringStruct(u'InternalName', u'LingnanCulture'),  # 内部文件名
+            StringStruct(u'LegalCopyright', u'Copyright (c) 2025 Li Beile. All rights reserved.'),  # 版权信息
+            StringStruct(u'OriginalFilename', u'LingnanCulture.exe'),  # 原始文件名
+            StringStruct(u'ProductName', u'岭南文化展示工具'),  # 产品名称
+            StringStruct(u'ProductVersion', u'1.0.0.0')  # 产品版本（字符串形式）
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct(u'Translation', [0x409, 1252])])  # 语言+代码页：0x409=英语，1252=ANSI编码
+  ]
+)
