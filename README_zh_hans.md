@@ -43,7 +43,7 @@ See README.md in the same directory for English version.
 2. **启动程序**  
    直接运行主脚本：  
    ```bash
-   python skeleton.py
+   python main.py
    ```
 
 3. **使用说明**  
