@@ -1,0 +1,237 @@
+<html>
+<head>
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 标题样式 */
+        h2 {
+            font-size: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #000;
+        }
+
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        /* 有序列表和无序列表样式 */
+        ol, ul {
+            padding-left: 1.2em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        /* 代码块样式 */
+        code {
+            font-family: Consolas, monospace;
+            background-color: #eee;
+            padding: 0.2em 0.4em;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>doc.html</title></head>
+<body>
+<div class="markdownRoot"><h2 id="运行耗时">运行耗时</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>次数</th>
+            <th>骑楼绘制/s</th>
+            <th>主体绘制/s</th>
+            <th>运行方式</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>17.4</td>
+            <td>20.6</td>
+            <td>PyCharm调用</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>17.3</td>
+            <td>20.2</td>
+            <td>PyCharm调用</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>17.6</td>
+            <td>20.5</td>
+            <td>PyCharm调用</td>
+        </tr>
+        <tr>
+            <td>平均</td>
+            <td>17.4</td>
+            <td>20.4</td>
+            <td>PyCharm调用</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>17.2</td>
+            <td>20.1</td>
+            <td>命令提示符调用</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>16.2</td>
+            <td>19.0</td>
+            <td>命令提示符调用</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>16.8</td>
+            <td>19.5</td>
+            <td>命令提示符调用</td>
+        </tr>
+        <tr>
+            <td>平均</td>
+            <td>16.7</td>
+            <td>19.5</td>
+            <td>命令提示符调用</td>
+        </tr>
+        </tbody>
+    </table>
+    <h2 id="视频脚本">视频脚本</h2>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align:center">镜号</th>
+            <th style="text-align:center">时长</th>
+            <th style="text-align:center">画面内容</th>
+            <th style="text-align:center">解说词</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0:00-0:10</td>
+            <td style="text-align:center">PyCharm视图，展示任意代码片段。</td>
+            <td style="text-align:center">
+                大家好，今天我向大家介绍我的岭南文化展示程序。为了方便大家直观感受，我先运行一遍。
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center">0:10-0:20</td>
+            <td style="text-align:center">程序启动，窗口标题栏显示默认标题，开始绘制骑楼。</td>
+            <td style="text-align:center">这里绘制的是骑楼，由柱子、窗户、栏杆和屋顶组成，从下往上、从左往右绘制。</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">3</td>
+            <td style="text-align:center">0:20-0:25</td>
+            <td style="text-align:center">继续绘制舞狮和粤语部分。</td>
+            <td style="text-align:center">这些是其他的岭南元素——舞狮和粤语。</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">4</td>
+            <td style="text-align:center">0:25-0:30</td>
+            <td style="text-align:center">画布最小化，来到PyCharm视图。</td>
+            <td style="text-align:center">下面来看看我的具体实现。</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">5</td>
+            <td style="text-align:center">0:30-0:45</td>
+            <td style="text-align:center">弹出左侧边栏“结构”，鼠标指向若干个类表强调，然后转到<code>Qilou</code>类的<code>draw</code>方法。
+            </td>
+            <td style="text-align:center">代码采用模块化设计，每个部分都独立为一个类，条理清晰。在<code>Qilou</code>类的核心方法<code>draw</code>中，内部方法复用多次。而每次绘制的坐标都是动态计算的，确保了整体布局统一。
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">6</td>
+            <td style="text-align:center">0:45-1:00</td>
+            <td style="text-align:center">
+                转到<code>LionDance</code>类的<code>draw</code>方法，接着是<code>ImageDisplayer</code>类的<code>show_img</code>方法。
+            </td>
+            <td style="text-align:center">至于舞狮的图案，我并没有使用Turtle绘制，而是将图片转换为Base
+                64编码后嵌入到代码。在运行时写入临时文件加载到画面，避免了外部文件的依赖。
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">7</td>
+            <td style="text-align:center">1:00-1:05</td>
+            <td style="text-align:center">转到<code>Cantonese</code>类。</td>
+            <td style="text-align:center">粤语则是简单的调用<code>pen.write</code>写入文字。</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">8</td>
+            <td style="text-align:center">1:05-1:10</td>
+            <td style="text-align:center">
+                再次弹出左侧边栏“结构”，鼠标指向<code>BasicShape</code>、<code>TextDisplayer</code>和<code>ImageDisplayer</code>类，依次展开每个类的成员。
+            </td>
+            <td style="text-align:center">我还定义了3个工具类，它们的存在提高了代码的扩展性。</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">9</td>
+            <td style="text-align:center">1:10-1:20</td>
+            <td style="text-align:center">转到<code>_get_windows_scaling</code>函数。</td>
+            <td style="text-align:center">代码还通过<code>ctypes</code>库感知系统DPI缩放因子，确保适配设备分辨率，清晰地显示画面。
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">10</td>
+            <td style="text-align:center">1:20-1:30</td>
+            <td style="text-align:center">快速展示几个文档字符串片段和静态类型注解。</td>
+            <td style="text-align:center">从整体来看，代码有着完整的docstring和类型注解，降低了二次开发难度。同时注重类私有成员下划线开头和常量大写等PEP
+                8代码编码规范，提高可读性。
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">11</td>
+            <td style="text-align:center">1:30-1:35</td>
+            <td style="text-align:center">回到<code>main</code>函数。</td>
+            <td style="text-align:center">这就是我作品的全部，谢谢你的观看。</td>
+        </tr>
+        </tbody>
+    </table>
+    <h2 id="遇到的问题">遇到的问题</h2>
+    <ol>
+        <li>字符重叠 / 挤成一团
+            <ul>
+                <li>问题：文字重叠成黑块，或字符间距过近。</li>
+                <li>原因：未正确更新画笔位置，多个字符被绘制在同一坐标；字符宽度测量不准确（动态测量时位置恢复错误，或固定比例与实际字体不匹配）；手动换行后未重置行首
+                    X 坐标，导致新行字符与上一行重叠。
+                </li>
+            </ul>
+        </li>
+        <li>测量痕迹残留（白色重影）
+            <ul>
+                <li>问题：文字表面有白色重影，遮挡正常内容。</li>
+                <li>原因：动态测量字符宽度时，临时绘制的字符未被彻底清除（依赖背景色隐藏的方式不可靠，残留痕迹与正式文字叠加）。
+                    3.状态管理混乱
+                </li>
+                <li>问题：多次调用后画笔位置、颜色等状态异常。</li>
+                <li>原因：未完整保存和恢复画笔的初始状态（位置、颜色、可见性、抬笔 /
+                    落笔状态等），前一次绘制的状态干扰后续操作。
+                </li>
+            </ul>
+        </li>
+    </ol>
+</div>
+</body>
+</html>

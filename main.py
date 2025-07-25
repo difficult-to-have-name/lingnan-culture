@@ -306,7 +306,7 @@ class BasicShape:
         """
         self.pen = pen
 
-    def line(self, length: int, heading: int = 0,
+    def Line(self, length: int, heading: int = 0,
              pencolor: Optional[Union[Tuple[int, int, int], str]] = "black") -> None:
         """
         直线
@@ -626,7 +626,7 @@ class Qilou:
         self.pen.goto(start_x + 180, start_y)
         self._single_pillar()
         self.pen.goto(start_x, start_y + 120 + 10 + 60)
-        self.shape.line(165)
+        self.shape.Line(165)
         self.pen.goto(start_x, start_y + 120 + 10)
         self.pen.setheading(90)
         self.shape.half_ellipse(82.5, 45, (self.pen.xcor() + 82.5, self.pen.ycor()))
@@ -706,10 +706,10 @@ class Qilou:
         self.pen.goto(start_x + 180, start_y)
         self.shape.rect((15, 50))
         self.pen.goto(start_x + 15, start_y - 10)
-        self.shape.line(165, 0)
+        self.shape.Line(165, 0)
         border_x = self.pen.xcor()
         self.pen.goto(self.pen.xcor(), self.pen.ycor() - 40)
-        self.shape.line(165, 180)
+        self.shape.Line(165, 180)
 
         if middle:
             self.pen.goto(self.pen.xcor() + 5, self.pen.ycor() + 5)
@@ -814,7 +814,7 @@ ZOOM_FACTOR = 2
 # 基准点
 BENCHMARK = (-800, -300)
 # 调试模式
-DEBUG = False
+DEBUG = True
 
 
 def main():
@@ -824,10 +824,10 @@ def main():
     screen = turtle.Screen()
     screen.title("岭南印记：骑楼・醒狮・粤韵")
     screen.bgcolor("white")
-    if DEBUG:
-        screen.tracer(0, 0)
-    else:
-        screen.tracer(1, 0)
+    # if DEBUG:
+    #     screen.tracer(0, 0)
+    # else:
+    screen.tracer(1, 0)
 
     root = screen.getcanvas().winfo_toplevel()
     root.tk.call("tk", "scaling", _get_windows_scaling() * ZOOM_FACTOR)
@@ -888,8 +888,11 @@ def main():
 
     pen.penup()
     pen.goto(BENCHMARK)
+    qilou_start = perf_counter()
     qilou = Qilou(pen)
     qilou.draw()
+    qilou_end = perf_counter()
+    print(f"骑楼绘制用时{round(qilou_end - qilou_start, 2)}s")
 
     pen.goto(-800, 400)
     qilou_td = TextDisplayer(pen, screen)
